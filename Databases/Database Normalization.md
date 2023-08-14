@@ -85,8 +85,7 @@ Solution will look like this:
 ![](images/4nf.jpg)
 
 Solution
-
-![](4nf-2.jpg)
+![](images/4nf-2.jpg)
 
 ### 5th Normal form
 ![](images/5nf-5.jpg)
