@@ -41,18 +41,18 @@
 
 ### Define where cookies are sent
 - `Domain` and `Path` attributes are used for this purpose
-- The Domain attribute specifies which hosts can receive a cookie. If the server does not specify a Domain, the browser defaults the domain to the same host that set the cookie, excluding subdomains. If Domain is specified, then subdomains are always included.
-	- For example, if you set Domain=mozilla.org, cookies are available on subdomains like developer.mozilla.org.
+- The Domain attribute specifies which hosts can receive a cookie. If the server does not specify a `Domain`, the browser defaults the domain to the same host that set the cookie, excluding subdomains. If `Domain` is specified, then subdomains are always included.
+	- For example, if you set `Domain=mozilla.org`, cookies are available on subdomains like`developer.mozilla.org`.
 - The Path attribute indicates a URL path that must exist in the requested URL in order to send the Cookie header.
-	- For example, if you set Path=/docs, these request paths match:
-		/docs
-		/docs/
-		/docs/Web/
-		/docs/Web/HTTP
+	- For example, if you set `Path=/docs`, these request paths match:
+		- `/docs`
+		- `/docs/`
+		- `/docs/Web/`
+		- `/docs/Web/HTTP`
 	- But these request paths don't:
-		/
-		/docsets
-		/fr/docs
+		- `/`
+		- `/docsets`
+		- `/fr/docs`
 		
 ### `SameSite` attribute
 - It has three options: Strict, Lax and None
@@ -62,7 +62,7 @@
 - None --> cookies are sent on both originating and cross-site requests, but only in secure contexts i.e. Cookies with SameSite=None must also specify the Secure attribute (they require a secure context).
 
 ### Cookie prefixes
-- `__Host-` --> If a cookie name has this prefix, it's accepted only if it's also marked with the `Secure` attribute -- was sent from a secure origin -- does not include a `Domain` attribute -- and has a `Path` set to '/'.
+- `__Host-` --> If a cookie name has this prefix, it's accepted only if it's also marked with the `Secure` attribute -- was sent from a secure origin -- does not include a `Domain` attribute -- and has a `Path` set to `/`.
 - `__Secure-` --> If a cookie name has this prefix, it's accepted only id it's marked with the `Secure` attribute -- was sent from a secure origin.
 
 ### First-Party vs Third-Party Cookies
